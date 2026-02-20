@@ -1,11 +1,12 @@
-# Homebrew Tap for Rocket Tools
+# Homebrew Tap
 
-This tap contains Homebrew formulae for tools by [Alastair Dawson](https://github.com/rocket-tycoon).
+This tap contains Homebrew formulae by [Alastair Dawson](https://github.com/rocket-tycoon).
 
 ## Installation
 
 ```bash
 brew tap rocket-tycoon/tap
+brew install manifest
 brew install rocketindex
 ```
 
@@ -13,12 +14,14 @@ brew install rocketindex
 
 | Formula | Description |
 |---------|-------------|
-| `rocketindex` | Rocket-fast F# language server and code indexer |
+| `manifest` | MCP server for living feature documentation |
+| `rocketindex` | Rocket-fast multi-language code indexer |
 
 ## Updating
 
 ```bash
 brew update
+brew upgrade manifest
 brew upgrade rocketindex
 ```
 
