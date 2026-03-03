@@ -2,22 +2,22 @@ class Manifest < Formula
   desc "MCP server for living feature documentation"
   homepage "https://github.com/manifestdocs/manifest"
   license "BUSL-1.1"
-  version "1.3.0"
+  version "1.4.0"
 
   on_macos do
     on_arm do
-      url "https://github.com/manifestdocs/manifest/releases/download/v1.3.0/manifest-v1.3.0-aarch64-apple-darwin.tar.gz"
-      sha256 "a4fccbffce4fe133d298151c1576acb78278094709b8784050ea09d76f57a0eb"
+      url "https://github.com/manifestdocs/manifest/releases/download/v1.4.0/manifest-v1.4.0-aarch64-apple-darwin.tar.gz"
+      sha256 "bb31a4fa9e205145a9b29c42abc520079f96ed8b8bb3d94a38a2e4f05ab37cfa"
     end
     on_intel do
-      url "https://github.com/manifestdocs/manifest/releases/download/v1.3.0/manifest-v1.3.0-x86_64-apple-darwin.tar.gz"
-      sha256 "6a43dc5e53dde8df5a3f1242216dcff3569e73a5c54dfdd7539935e63ca7c3b0"
+      url "https://github.com/manifestdocs/manifest/releases/download/v1.4.0/manifest-v1.4.0-x86_64-apple-darwin.tar.gz"
+      sha256 "7524bf7bd8270e9bebc419f963ded4ddee61c81ed5ee4c32d187b3f9cbcd95b7"
     end
   end
 
   on_linux do
-    url "https://github.com/manifestdocs/manifest/releases/download/v1.3.0/manifest-v1.3.0-x86_64-unknown-linux-gnu.tar.gz"
-    sha256 "5e9fa9178619bf90565a410222875774c8c00d07b72092038f4b568111001794"
+    url "https://github.com/manifestdocs/manifest/releases/download/v1.4.0/manifest-v1.4.0-x86_64-unknown-linux-gnu.tar.gz"
+    sha256 "7765c977c2c2be624c905fbef5cd1c0c66e960c74e0d119c8798cc1a52b8b7f6"
   end
 
   def install
