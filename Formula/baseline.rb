@@ -7,7 +7,7 @@ class Baseline < Formula
   on_macos do
     on_arm do
       url "https://github.com/manifestdocs/baseline/releases/download/v#{version}/blc-v#{version}-aarch64-apple-darwin.tar.gz"
-      sha256 "514ff36b7b83b5e17355faa3b6947da8c0d334c16d899ebaa4fd86da6e34e012"
+      sha256 "6088595e3984e0033782fe0f19024204d66a9117be59c5d52fc02354a46fff00"
     end
   end
 
