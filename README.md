@@ -1,28 +1,24 @@
 # Homebrew Tap
 
-This tap contains Homebrew formulae by [Alastair Dawson](https://github.com/rocket-tycoon).
+Homebrew formulae for [Baseline](https://github.com/baseline-lang/baseline).
 
 ## Installation
 
 ```bash
-brew tap rocket-tycoon/tap
-brew install manifest
-brew install rocketindex
+brew install baseline-lang/tap/baseline
 ```
 
 ## Available Formulae
 
 | Formula | Description |
 |---------|-------------|
-| `manifest` | MCP server for living feature documentation |
-| `rocketindex` | Rocket-fast multi-language code indexer |
+| `baseline` | Strongly typed, effect-based programming language |
 
 ## Updating
 
 ```bash
 brew update
-brew upgrade manifest
-brew upgrade rocketindex
+brew upgrade baseline
 ```
 
 ## License
