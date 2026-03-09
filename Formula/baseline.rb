@@ -2,12 +2,12 @@ class Baseline < Formula
   desc "Strongly typed, effect-based programming language"
   homepage "https://github.com/baseline-lang/baseline"
   license "MIT"
-  version "0.3.1"
+  version "0.3.2"
 
   on_macos do
     on_arm do
       url "https://github.com/baseline-lang/baseline/releases/download/v#{version}/blc-v#{version}-aarch64-apple-darwin.tar.gz"
-      sha256 "c9625a8b9644b502bd916bb91e65cd125b761d2076e210f09de6c5fbad95212d"
+      sha256 "bfae5f67652af6a89fb9827f2c346aa1a4b005c7cbca351a71de8fa07dfe7f17"
     end
   end
 
