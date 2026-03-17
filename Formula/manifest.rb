@@ -1,31 +1,19 @@
 class Manifest < Formula
-  desc "MCP server for living feature documentation"
+  desc "Living feature documentation for AI-driven development"
   homepage "https://github.com/manifestdocs/manifest"
   license "BUSL-1.1"
-  version "1.5.0"
+  version "0.2.0"
 
-  on_macos do
-    on_arm do
-      url "https://github.com/manifestdocs/manifest/releases/download/v1.5.0/manifest-v1.5.0-aarch64-apple-darwin.tar.gz"
-      sha256 "08086cff2a4524c9a9603c8d6318f4741a3fc1cbf954db9e4c5dbdb265374f88"
-    end
-    on_intel do
-      url "https://github.com/manifestdocs/manifest/releases/download/v1.5.0/manifest-v1.5.0-x86_64-apple-darwin.tar.gz"
-      sha256 "0de5796024fff902dee3cddd579f72cb6149008d2af8e1d6d15ff77d12730a4a"
-    end
-  end
-
-  on_linux do
-    url "https://github.com/manifestdocs/manifest/releases/download/v1.5.0/manifest-v1.5.0-x86_64-unknown-linux-gnu.tar.gz"
-    sha256 "e5d67e7959292b58e9861d00693e8ee3ff1d850bfe05f53d55f0aa4173214684"
-  end
+  depends_on "node@22"
 
   def install
-    bin.install "manifest"
+    system "npm", "install", "-g", "--prefix", libexec,
+           "@manifestdocs/app@#{version}", "@manifestdocs/pi@#{version}"
+    bin.install_symlink Dir[libexec/"bin/*"]
   end
 
   service do
-    run [opt_bin/"manifest", "serve"]
+    run [opt_bin/"manifest", "start"]
     keep_alive true
     working_dir var/"manifest"
     log_path var/"log/manifest.log"
@@ -37,7 +25,24 @@ class Manifest < Formula
     (var/"log").mkpath
   end
 
+  def caveats
+    <<~EOS
+      Manifest runs on port 4242.
+
+      Start the service:
+        brew services start manifest
+
+      Open http://localhost:4242 in your browser.
+
+      To integrate with Pi:
+        manifest setup pi
+
+      To integrate with Claude Code:
+        manifest setup claude
+    EOS
+  end
+
   test do
-    system "#{bin}/manifest", "--help"
+    system bin/"manifest", "version"
   end
 end
